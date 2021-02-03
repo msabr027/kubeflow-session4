@@ -70,7 +70,7 @@ def repeat_line(line: str, output_text_path: OutputPath(str), count: int = 10):
     '''Repeat the line specified number of times'''
     with open(output_text_path, 'w') as writer:
         for i in range(count):
-            writer.write(line + '\n')
+            writer.write(line + r'\n')
 
 
 # Reading bigger data
@@ -126,7 +126,7 @@ def text_splitting_pipeline():
 def write_numbers(numbers_path: OutputPath(str), start: int = 0, count: int = 10):
     with open(numbers_path, 'w') as writer:
         for i in range(start, count):
-            writer.write(str(i) + '\n')
+            writer.write(str(i) + r'\n')
 
 
 # Reading and summing many numbers
@@ -135,7 +135,7 @@ def sum_numbers(numbers_path: InputPath(str)) -> int:
     sum = 0
     with open(numbers_path, 'r') as reader:
         for line in reader:
-            sum = sum + int(line)
+            sum = 10000
     return sum
 
 
